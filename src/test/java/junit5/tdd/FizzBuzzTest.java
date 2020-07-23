@@ -1,5 +1,6 @@
 package junit5.tdd;
 
+import javafx.scene.media.AudioClip;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -33,4 +34,16 @@ class FizzBuzzTest {
         assertThat(actual, is("1"));
     }
 
+    @Test
+    void should_return_fizz_when_play_fizz_buzz_given_3() {
+        //given
+        int number = 3;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        //when
+        String actual = fizzBuzz.play(number);
+
+        //then
+        assertThat(actual, is("Fizz"));
+    }
 }
