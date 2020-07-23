@@ -72,4 +72,17 @@ class FizzBuzzTest {
         //then
         assertThat(actual, is("Whizz"));
     }
+
+    @Test
+    void should_return_fizzbuzz_when_play_fizz_buzz_given_15() {
+        //given
+        int number = 15;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        //when
+        String actual = fizzBuzz.play(number);
+
+        //then
+        assertThat(actual, is("FizzBuzz"));
+    }
 }
