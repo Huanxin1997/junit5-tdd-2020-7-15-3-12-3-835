@@ -21,11 +21,14 @@ class FizzBuzzTest {
     }
 
     @Test
-    void should_return_1_when_play_fizz_buzz_given_1(int number) {
+    void should_return_1_when_play_fizz_buzz_given_1() {
         //given
         FizzBuzz fizzBuzz = new FizzBuzz();
+        int number = 1;
+
         //when
-        String actual = fizzBuzz.play(1);
+        String actual = fizzBuzz.play(number);
+
         //then
         assertThat(actual, is("1"));
     }
